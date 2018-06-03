@@ -21,6 +21,10 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
+        name: sbtCompile
+        code: |
+          ./sbt/bin/sbt test:compile
+    - script:
         name: sbtTest
         code: |
           ./sbt/bin/sbt test:test
